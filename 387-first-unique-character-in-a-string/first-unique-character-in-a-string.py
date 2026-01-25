@@ -1,14 +1,11 @@
 class Solution:
     def firstUniqChar(self, s: str) -> int:
-        char_count={}
+        unique={}
         for char in s:
-            if char in s:
-                char_count[char] =char_count.get(char,0)+1
-            else:
-                char_count =1
-
-        for index,char in enumerate(s):
-            if char_count[char]==1:
-                return index
+            unique[char]=unique.get(char,0)+1
+        for i ,char in enumerate(s):
+            if unique[char]==1:
+                return i
         return -1
+
         

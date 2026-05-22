@@ -1,6 +1,10 @@
-class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
-        ans=0
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        x=0
         for i in nums:
-            ans ^=i
-        return ans
+            x=x^i
+        return x
